@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111827">
+<title>CalcPro | Smart Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">⌗</span><span>Calc<span>Pro</span></span></div>
+    <span class="tag">STUDENT TOOLKIT</span>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">YOUR EVERYDAY STUDY COMPANION</p>
+    <h1>Calculate smarter<span>.</span></h1>
+    <p class="sub">Simple calculations. Clear academic results.</p>
+  </section>
+
+  <nav class="tabs" aria-label="Calculator tools">
+    <button class="tab active" data-tab="basic">▦ &nbsp; Basic calculator</button>
+    <button class="tab" data-tab="gpa">▤ &nbsp; GPA calculator</button>
+  </nav>
+
+  <main>
+    <section class="panel" id="basicPanel">
+      <div class="section-heading"><div><p class="eyebrow">QUICK MATH</p><h2>Basic calculator</h2></div><span class="round-icon">＋</span></div>
+      <div class="display">
+        <span id="calcExpression">Ready when you are</span>
+        <strong id="calcResult">0</strong>
+      </div>
+      <div class="calc-grid">
+        <button class="key utility" data-action="clear">AC</button>
+        <button class="key utility" data-action="back">⌫</button>
+        <button class="key operator" data-op="/">÷</button>
+        <button class="key operator" data-op="*">×</button>
+        <button class="key" data-num="7">7</button><button class="key" data-num="8">8</button><button class="key" data-num="9">9</button><button class="key operator" data-op="-">−</button>
+        <button class="key" data-num="4">4</button><button class="key" data-num="5">5</button><button class="key" data-num="6">6</button><button class="key operator" data-op="+">+</button>
+        <button class="key" data-num="1">1</button><button class="key" data-num="2">2</button><button class="key" data-num="3">3</button><button class="key equals" data-action="equals">=</button>
+        <button class="key zero" data-num="0">0</button><button class="key" data-num=".">.</button>
+      </div>
+      <p class="hint" id="calcMessage">Choose numbers and an operation to begin.</p>
+    </section>
+
+    <section class="panel hidden" id="gpaPanel">
+      <div class="section-heading"><div><p class="eyebrow">ACADEMIC PERFORMANCE</p><h2>GPA calculator</h2></div><span class="round-icon green">✦</span></div>
+      <label class="field-label" for="studentName">Student name <span>OPTIONAL</span></label>
+      <input id="studentName" class="text-input" maxlength="40" placeholder="Enter student name">
+      <div class="marks-title"><strong>Subject marks</strong><span>5 subjects · each out of 100</span></div>
+      <div class="marks-grid" id="marksGrid"></div>
+      <button class="primary-btn" id="calculateGpa">Calculate my GPA <span>→</span></button>
+      <button class="secondary-btn" id="resetGpa">Reset marks</button>
+      <div class="result-card hidden" id="gpaResult" aria-live="polite">
+        <p class="eyebrow">YOUR RESULT</p>
+        <h3 id="resultGreeting">Great work!</h3>
+        <div class="result-stats">
+          <div><span>Percentage</span><strong id="percentageOut">0%</strong></div>
+          <div><span>GPA</span><strong id="gpaOut">0.00<span class="out-of"> / 4</span></strong></div>
+          <div><span>Grade</span><strong id="gradeOut">—</strong></div>
+        </div>
+        <p class="formula-note">Project formula: GPA = (percentage ÷ 100) × 4</p>
+      </div>
+      <p class="hint" id="gpaMessage">Enter a mark from 0 to 100 for each subject.</p>
+    </section>
+  </main>
+  <footer>CalcPro <span>•</span> A beginner C programming capstone</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
